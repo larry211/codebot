@@ -3,10 +3,10 @@ import asyncio
 import random
 import openpyxl
 import datetime
+import os
 
 client = discord.Client()
 
-token = "ODI3NzE0ODI4MDE3MDc0MjM2.YGfDgQ.lE3hWlGYnGb1SCLNoCFv4CxLkgQ"
 
 @client.event
 async def on_ready():
@@ -80,5 +80,5 @@ async def on_message(message):
                 break
         file.save("유저정보.xlsx")
 
-
-client.run(token)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
