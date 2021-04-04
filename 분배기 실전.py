@@ -80,5 +80,5 @@ async def on_message(message):
                 break
         file.save("유저정보.xlsx")
 
-access_token = os.environ["BOT_TOKEN"]
+access_token = os.environ['BOT_TOKEN']
 client.run(access_token)
